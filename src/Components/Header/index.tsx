@@ -1,6 +1,9 @@
+import { useTheme } from "../../Hooks/useTheme";
 import * as C from "./styles";
 
 const Header = () => {
+  const { theme } = useTheme();
+
   return (
     <C.Container>
       <C.ContentLeft>LEFT</C.ContentLeft>

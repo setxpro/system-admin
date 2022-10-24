@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 50px;
-  background: #ffffff;
+  background: ${(props) => props.theme.colors.header};
+  transition: all 1s ease;
 
   position: sticky;
   top: 0;
@@ -32,7 +33,8 @@ export const NameArea = styled.div`
 
   h3 {
     font-weight: 500;
-    color: #eee;
+    color: ${(props) => props.theme.colors.text};
+    transition: all 1s ease;
   }
 
   h4 {
@@ -49,7 +51,8 @@ export const AvatarArea = styled.div`
     img {
       width: 45px;
       border-radius: 50%;
-      border: 2px solid #7367f0;
+      border: 2px solid ${(props) => props.theme.colors.border};
+      transition: all 1s ease;
       padding: 2px;
     }
     &::after {
@@ -62,7 +65,8 @@ export const AvatarArea = styled.div`
       right: 3px;
       position: absolute;
 
-      border: 2px solid #283046;
+      border: 2px solid ${(props) => props.theme.colors.header};
+      transition: all 1s ease;
     }
   }
 `;
