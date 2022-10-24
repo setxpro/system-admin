@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 export const Container = styled.div<{ openSidebar: boolean }>`
   width: ${(props) => (props.openSidebar ? "200px" : "50px")};
   transition: all 0.5s ease;
-  background: #110f1a;
+  background: #7367f0;
   position: fixed;
   left: 0;
   top: 0;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 50px;
-  background: #283046;
+  background: #ffffff;
 
   position: sticky;
   top: 0;
@@ -49,7 +49,7 @@ export const AvatarArea = styled.div`
     img {
       width: 45px;
       border-radius: 50%;
-      border: 2px solid #fff;
+      border: 2px solid #7367f0;
       padding: 2px;
     }
     &::after {
