@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
+
 export const Container = styled.div`
   height: 50px;
   background: ${(props) => props.theme.colors.header};
@@ -69,4 +71,15 @@ export const AvatarArea = styled.div`
       transition: all 1s ease;
     }
   }
+`;
+
+export const LightIcon = styled(MdOutlineLightMode)`
+  color: ${(props) => props.theme.colors.text};
+  font-size: 1.5rem;
+  cursor: pointer;
+`;
+export const DarkIcon = styled(MdOutlineNightlight)`
+  color: ${(props) => props.theme.colors.text};
+  font-size: 1.5rem;
+  cursor: pointer;
 `;

@@ -2,13 +2,16 @@ import { useTheme } from "../../Hooks/useTheme";
 import * as C from "./styles";
 
 const Header = () => {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <C.Container>
       <C.ContentLeft>LEFT</C.ContentLeft>
       <C.ContentRight>
-        <div>TH</div>
+        <div onClick={toggleTheme}>
+          {theme.title === "light" && <C.DarkIcon />}
+          {theme.title === "dark" && <C.LightIcon />}
+        </div>
         <C.AvatarAndName>
           <C.NameArea>
             <h3>Patrick Anjos</h3>

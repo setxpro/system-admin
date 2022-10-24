@@ -2,5 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
-  background: #f4f4f4;
+  transition: all 1s ease;
+  background: ${(props) => props.theme.colors.layout};
+  color: ${(props) => props.theme.colors.text};
 `;

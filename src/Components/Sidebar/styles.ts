@@ -4,8 +4,9 @@ import { IoMdClose } from "react-icons/io";
 
 export const Container = styled.div<{ openSidebar: boolean }>`
   width: ${(props) => (props.openSidebar ? "200px" : "50px")};
-  transition: all 0.5s ease;
-  background: #7367f0;
+  transition: all 1s ease;
+  background: ${(props) => props.theme.colors.sidebar};
+  color: ${(props) => props.theme.colors.text};
   position: fixed;
   left: 0;
   top: 0;
@@ -20,8 +21,6 @@ export const BtnsTop = styled.div`
   height: 50px;
   padding: 0 5px;
   transition: all 0.5s ease;
-
-  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
 
   .button-open {
     width: 40px;
