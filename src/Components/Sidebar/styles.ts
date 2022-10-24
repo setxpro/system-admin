@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 export const Container = styled.div<{ openSidebar: boolean }>`
   width: ${(props) => (props.openSidebar ? "200px" : "50px")};
   transition: all 0.5s ease;
-  background: #444ddd;
+  background: #161c30;
   position: fixed;
   left: 0;
   top: 0;
@@ -13,13 +13,15 @@ export const Container = styled.div<{ openSidebar: boolean }>`
 
   z-index: 999;
 `;
-export const BtnsTop = styled.div<{ openSidebar: boolean }>`
+export const BtnsTop = styled.div`
   display: flex;
   align-items: center;
-  justify-content: ${(props) => (props.openSidebar ? "flex-end" : "center")};
+  justify-content: flex-end;
   height: 50px;
-  padding: 0 ${(props) => (props.openSidebar ? "10px" : "0px")};
+  padding: 0 5px;
   transition: all 0.5s ease;
+
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
 
   .button-open {
     width: 40px;

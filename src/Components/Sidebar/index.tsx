@@ -6,7 +6,7 @@ const Sidebar = () => {
 
   return (
     <C.Container openSidebar={openSidebar}>
-      <C.BtnsTop openSidebar={openSidebar}>
+      <C.BtnsTop>
         {!openSidebar ? (
           <div className="button-open" onClick={wrapperSidebar}>
             <C.BarsIcon />
