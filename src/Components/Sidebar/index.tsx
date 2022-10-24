@@ -1,9 +1,22 @@
+import { useSidebar } from "../../Hooks/useSidebar";
 import * as C from "./styles";
 
 const Sidebar = () => {
+  const { openSidebar, wrapperSidebar } = useSidebar();
+
   return (
-    <C.Container>
-      <div>Sidebar</div>
+    <C.Container openSidebar={openSidebar}>
+      <C.BtnsTop openSidebar={openSidebar}>
+        {!openSidebar ? (
+          <div className="button-open" onClick={wrapperSidebar}>
+            <C.BarsIcon />
+          </div>
+        ) : (
+          <div className="button-close" onClick={wrapperSidebar}>
+            <C.CloseIcon />
+          </div>
+        )}
+      </C.BtnsTop>
     </C.Container>
   );
 };
