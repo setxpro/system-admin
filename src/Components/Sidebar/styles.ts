@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { HiOutlineBars3BottomLeft } from "react-icons/hi2";
-import { IoMdClose } from "react-icons/io";
+import { TbTextWrapDisabled, TbTextWrap } from "react-icons/tb";
 
 export const Container = styled.div<{ openSidebar: boolean }>`
   width: ${(props) => (props.openSidebar ? "200px" : "50px")};
@@ -21,47 +20,30 @@ export const BtnsTop = styled.div`
   height: 50px;
   padding: 0 5px;
   transition: all 0.5s ease;
-
-  .button-open {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-
-    background: rgba(255, 255, 255, 0.4);
-    transition: 1s;
-    &:hover {
-      background: rgba(200, 200, 200, 0.4);
-    }
-
-    cursor: pointer;
-  }
-  .button-close {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-
-    background: rgba(255, 255, 255, 0.4);
-    transition: 1s;
-    &:hover {
-      background: rgba(200, 200, 200, 0.4);
-    }
-
-    cursor: pointer;
-  }
 `;
-export const BarsIcon = styled(HiOutlineBars3BottomLeft)`
+
+export const Buttons = styled.div`
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+
+  background: rgba(255, 255, 255, 0.4);
+  transition: 1s;
+  &:hover {
+    background: rgba(200, 200, 200, 0.4);
+  }
+
+  cursor: pointer;
+`;
+
+export const BarsIcon = styled(TbTextWrapDisabled)`
   font-size: 2rem;
-  margin: 0;
   color: #fff;
 `;
-export const CloseIcon = styled(IoMdClose)`
+export const CloseIcon = styled(TbTextWrap)`
   font-size: 2rem;
-  margin: 0;
   color: #fff;
 `;

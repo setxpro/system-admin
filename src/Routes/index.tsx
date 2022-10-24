@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import PrivatePage from "../Pages/Private";
 import Template from "../Pages/Template";
+import Security from "../Security";
 
 const RoutesApp: React.FC = () => {
   return (
@@ -9,9 +10,11 @@ const RoutesApp: React.FC = () => {
       <Route
         path="/"
         element={
-          <Template>
-            <PrivatePage />
-          </Template>
+          <Security>
+            <Template>
+              <PrivatePage />
+            </Template>
+          </Security>
         }
       />
     </Routes>

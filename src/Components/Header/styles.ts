@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
+import { BsChatLeftText, BsCalendarCheck } from "react-icons/bs";
+import { RiTodoLine } from "react-icons/ri";
 
 export const Container = styled.div`
   height: 50px;
@@ -18,13 +20,18 @@ export const Container = styled.div`
   padding: 0 1rem;
 `;
 
-export const ContentLeft = styled.div``;
+export const ContentLeft = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
 
 export const ContentRight = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
 `;
+export const AreaToggleTheme = styled.div``;
 export const AvatarAndName = styled.div`
   display: flex;
   gap: 3px;
@@ -37,12 +44,12 @@ export const NameArea = styled.div`
     font-weight: 500;
     color: ${(props) => props.theme.colors.text};
     transition: all 1s ease;
+    text-align: end;
   }
 
   h4 {
     font-weight: 500;
     color: #999;
-    text-align: end;
   }
 `;
 
@@ -79,6 +86,21 @@ export const LightIcon = styled(MdOutlineLightMode)`
   cursor: pointer;
 `;
 export const DarkIcon = styled(MdOutlineNightlight)`
+  color: ${(props) => props.theme.colors.text};
+  font-size: 1.5rem;
+  cursor: pointer;
+`;
+export const Chatcon = styled(BsChatLeftText)`
+  color: ${(props) => props.theme.colors.text};
+  font-size: 1.5rem;
+  cursor: pointer;
+`;
+export const CalendarIcon = styled(BsCalendarCheck)`
+  color: ${(props) => props.theme.colors.text};
+  font-size: 1.5rem;
+  cursor: pointer;
+`;
+export const TodoIcon = styled(RiTodoLine)`
   color: ${(props) => props.theme.colors.text};
   font-size: 1.5rem;
   cursor: pointer;

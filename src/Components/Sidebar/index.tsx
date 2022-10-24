@@ -7,14 +7,14 @@ const Sidebar = () => {
   return (
     <C.Container openSidebar={openSidebar}>
       <C.BtnsTop>
-        {!openSidebar ? (
-          <div className="button-open" onClick={wrapperSidebar}>
-            <C.BarsIcon />
-          </div>
-        ) : (
-          <div className="button-close" onClick={wrapperSidebar}>
+        {openSidebar ? (
+          <C.Buttons onClick={wrapperSidebar}>
             <C.CloseIcon />
-          </div>
+          </C.Buttons>
+        ) : (
+          <C.Buttons onClick={wrapperSidebar}>
+            <C.BarsIcon />
+          </C.Buttons>
         )}
       </C.BtnsTop>
     </C.Container>
